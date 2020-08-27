@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.8.2
+install:
+- pip install -r requirements.txt
+script:
+- pytest
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: l9DoC0j5blog5THu+kKnmpYccHsgSEZacU3yLrPS1mW8ciDSPh1TLzYDJ2Y1a7TZpqsTAP3bEoY6uGObcgRFrSQwdEn0EjnQYoGqGhWqIuQgWTAlQK5EqeED1piGrDoBp4VKoHaF2xCGbWlJOxdaANu5CBAJO5AXjDcttfPgMmQSHLZMDgIl3EJDzt85Vdn+jaOETQaDlpmYOpkAkAqzHUcs+ZVCgXZbPdwA8WOv/C0cosN1MB8dLmJRE14Yf57NPQdsq6dkqM2Am0MU15Nz+CIpdC4sQpvFtlJHGA1LFegmvYk85oi7geKZ+amG9fGYVLqfRLYwNMivFQ2vJe89jObEPMXalbKfLtT9LOoszImhRlQmo/sGVCkfCwrueP/ntYBkMvNN38KOodr+7ONS/kUEngS82f17Q4D0fdOgu33PIEkYn05ICJaIYNOuDmMqOkV46y09uVZ5SPpBxa2D6Kasw4tFFAeC+JkzHFQvkjnb4qv82HTHTeHIKqjwFBuA9PRTWmm46fOKwsq9bmsZQF08tYBt7AcYMGRnMI2U+mj8ugQ0GKWffKeZ2rvGsnr/Fxn3pndlpKid5ydBVp2JBF8B7nXyUkXx4JRcY75t68aQ02vPXZcrLJYD38ZHVSvErFDZLLbRga0wFEGZCjUvu+3R6FSkl1Y6SseS7tiuckk=
+  app: dschallenge
+  on:
+    repo: souluanf/dschallenge
